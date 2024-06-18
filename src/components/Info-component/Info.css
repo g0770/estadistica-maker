@@ -1,0 +1,45 @@
+
+
+.InfoAdicional {
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    gap: 0.5em;
+}
+
+.InfoAdicional > p{
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    transition: border-color 0.25s;
+}
+
+
+.DatosOriginales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    gap: 0.5em;
+}
+
+.InfoAdicional > label,textarea{
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    transition: border-color 0.25s;
+    width: 50%;
+}
