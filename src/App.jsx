@@ -21,7 +21,8 @@ function App() {
     SumatoriaVarianza: [],
     Varianza: 0,//
     Desviacion: 0,//
-    Angulos: []
+    Angulos: [],
+    Intervalos: false
   })
 
   const CambiarTabla = (Tabla) => {

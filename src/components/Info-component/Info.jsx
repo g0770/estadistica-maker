@@ -10,6 +10,14 @@ function Info({Tabla}) {
         <p><strong>{"Varianza (ς^2)"}</strong>: {Tabla["Varianza"]}</p>
         <p><strong>{"Desviacion (ς)"}</strong>: {Tabla["Desviacion"]}</p>
       </div>
+      {Tabla["Intervalos"] ? (
+        <div className='InfoAdicional Intervalos'>
+          <p><strong>{"Amplitud (A)"}</strong>: {Tabla["IntervalosInfo"]["Amplitud"]}</p>
+          <p><strong>{"Numero de clases (Nc)"}</strong>: {Tabla["IntervalosInfo"]["NumeroDeClases"]}</p>
+          <p><strong>{"Recorrido (Re)"}</strong>: {Tabla["IntervalosInfo"]["Recorrido"]}</p>
+        </div>
+      ) : null}
+      
       <div className='DatosOriginales'>
         <label htmlFor="DatosSinOrdenar">Datos sin ordenar: </label>
         <textarea name="DatosSinOrdenar" id="" value={Tabla["VariablesLimpias"].join()}></textarea>

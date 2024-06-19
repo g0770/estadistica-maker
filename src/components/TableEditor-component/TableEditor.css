@@ -25,12 +25,12 @@ form {
     margin-bottom: 5vh;
 }
 
-.Values {
+.Values, .Settings {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.2em;
+    gap: 0.5em;
 }
 
 .Values > input {

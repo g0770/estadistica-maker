@@ -8,7 +8,8 @@ function Table({Tabla}) {
       <table>
         <thead>
             <tr>
-                <td>X</td>  
+                <td>X</td>
+                {Tabla["Intervalos"] ? (<td>Mc</td>) : null}  
                 <td>FA</td>  
                 <td>FR</td>  
                 <td>FAC</td>  
@@ -21,7 +22,12 @@ function Table({Tabla}) {
         <tbody>
             {Tabla["Variables"].map((valor, i) => (
                 <tr key={i}>
-                <td>{valor}</td>
+                {Tabla["Intervalos"] ? 
+                  i == (Tabla["Variables"].length-1) ? (<td>{"["+valor[0]+";"+valor[1]+"]"}</td>) : (<td>{"["+valor[0]+";"+valor[1]+")"}</td>)
+                :
+                  (<td>{valor}</td>)
+                }
+                {Tabla["Intervalos"] ? <td>{Tabla["MarcasDeClase"][i]}</td> : null}  
                 <td>{Tabla["FrecuenciasAbsolutas"][i]}</td>
                 <td>{Tabla["FrecuenciasRelativas"][i]}</td>
                 <td>{Tabla["FrecuenciasAcumuladas"][i]}</td>
